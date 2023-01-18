@@ -1,0 +1,22 @@
+datasource db{
+  provider = "postgresql"
+  url = "postgresql://postgres:1234@localhost:5432/postgres?shema=public"
+}
+generator users {
+  provider = "prisma-client-js"
+}
+model Car {
+  id Int @default(autoincrement()) @id
+  model String
+  yaer Int
+  user User @relation(fields: [userId],references: [id])
+  userId Int
+}
+
+model User{
+id Int @default(autoincrement()) @id
+username String @unique
+password String @unique
+  cars Car[]
+}
+
