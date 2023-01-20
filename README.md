@@ -15,4 +15,16 @@ My first rest api project but this not that I have got finished it.
  #### npm install @prisma/client
 # How to genereate your project in Prisma?
 
+model Users {
+  id String @id @default(uuid())
+  name String
+  lastname String?
+}
+
+model Cars {
+  id  String @id @default(uuid())
+  compName String
+  model String
+}
+
 #### npx prisma generate 
