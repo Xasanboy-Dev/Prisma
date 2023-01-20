@@ -13,3 +13,6 @@ My first rest api project but this not that I have got finished it.
 # How to install Prisma/client?
  
  #### npm install @prisma/client
+# How to genereate your project in Prisma?
+
+#### npx prisma generate 
